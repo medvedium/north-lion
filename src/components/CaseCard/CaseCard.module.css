@@ -1,0 +1,8 @@
+.image {
+  filter: sepia(2);
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+.card {
+}

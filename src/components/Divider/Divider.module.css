@@ -1,0 +1,27 @@
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+.content {
+  clip-path: polygon(98% 0, 100% 50%, 98% 100%, 0% 100%, 2% 54%, 0% 0%);
+  background: var(--dark-bg-color);
+  min-height: 90px;
+  width: 100%;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 40px 12px 60px;
+
+  @media (width < 991px) {
+    clip-path: none;
+    border-radius: 12px;
+  }
+}
+
+.image {
+  @media (width < 991px) {
+    display: none;
+  }
+}

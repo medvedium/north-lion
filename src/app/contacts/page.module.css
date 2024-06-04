@@ -1,0 +1,6 @@
+.contacts_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}

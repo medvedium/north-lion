@@ -1,0 +1,67 @@
+.flying {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 20;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+
+  &:hover .icon {
+    color: var(--white);
+  }
+
+  @media (width < 991px) {
+    display: none;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.icon.active {
+  color: var(--white);
+}
+
+.callback {
+  display: none;
+  height: 60px;
+  padding: 8px 24px;
+  border-radius: 8px;
+  position: fixed;
+  right: 120px;
+  bottom: 40px;
+  background-color: var(--primary-color);
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  @media (width < 991px) {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 20px;
+    padding: 8px;
+  }
+}
+
+.callback__open {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}

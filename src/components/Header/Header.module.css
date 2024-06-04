@@ -1,0 +1,100 @@
+.header {
+  background-color: var(--dark-bg-color);
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-grow: 2;
+  transition: all 0.3s linear;
+
+  @media (width < 991px) {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark-bg-color);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    transition: all 0.3s linear;
+  }
+
+  &.active {
+    @media (width < 991px) {
+      transform: translateY(0);
+    }
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  justify-content: flex-start;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.logoSvg {
+  width: 64px;
+  height: 64px;
+  @media (width < 991px) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.burger {
+  display: none;
+
+  @media (width < 991px) {
+    display: block;
+  }
+}
+
+.telegramLink {
+  margin-left: auto;
+  @media (width < 991px) {
+    margin-left: 0;
+  }
+}
+
+.closeMenu {
+  /*display: none;*/
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  transform: rotate(45deg);
+  width: 24px;
+  height: 24px;
+}
